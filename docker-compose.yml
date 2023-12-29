@@ -1,0 +1,13 @@
+---
+
+version: "3.9"
+
+services:
+  devcontainer:
+    build:
+      dockerfile: .devcontainer/Dockerfile
+      target: dev
+    command: sleep infinity
+    volumes:
+      - .:/var/workspace
+    privileged: true
