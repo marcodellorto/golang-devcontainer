@@ -74,6 +74,9 @@ This project is licensed under the [MIT License](LICENSE.md).
   - [VS Code DevContainers](https://code.visualstudio.com/docs/remote/containers): Structure and setup inspiration.
   - [golangci-lint](https://golangci-lint.run/): Linting tool for checking Go code.
 
+- **Docker Images**:
+  - [marcodellorto/golang](https://hub.docker.com/r/marcodellorto/golang): Docker images used as a base for the Golang development environment.
+
 - **External Resources**:
   - [Golang Documentation](https://golang.org/doc/): Best practices and language features.
   - [Golang Project Layout](https://github.com/golang-standards/project-layout): Basic layout for Go application projects, not an official standard but highly suggested.
