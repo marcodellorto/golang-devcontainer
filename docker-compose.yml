@@ -4,7 +4,7 @@ version: "3.9"
 
 services:
   devcontainer:
-    image: marcodellorto/golang:1.21-bookworm-dev
+    image: marcodellorto/golang:1.22-bookworm-dev
     command: sleep infinity
     volumes:
       - .:/var/workspace
