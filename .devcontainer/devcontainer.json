@@ -8,6 +8,7 @@
   "workspaceFolder": "/var/workspace",
   "mounts": [
     "source=${env:HOME}${env:USERPROFILE}/.aws,target=/root/.aws,type=bind",
+    "source=${env:HOME}${env:USERPROFILE}/.claude,target=/root/.claude,type=bind",
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
   ],
   "customizations": {
@@ -27,6 +28,7 @@
         "go.testFlags": [
           "-v"
         ],
+        "claudeCode.useTerminal": true,
         "yaml.customTags": [
           "!Equals sequence",
           "!FindInMap sequence",
@@ -49,8 +51,12 @@
         "TzachOvadia.todo-list",
         "redhat.vscode-yaml",
         "editorconfig.editorconfig",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "anthropic.claude-code"
       ]
     }
+  },
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/root/.claude",
   }
 }

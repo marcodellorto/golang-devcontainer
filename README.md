@@ -12,6 +12,7 @@ The Golang DevContainer provides a pre-configured environment for Golang develop
 - **Visual Studio Code Integration**: Optimized settings and extensions for seamless integration with VS Code.
 - **Docker Configuration**: Ready-to-use Dockerfile and docker-compose configuration for easy containerization.
 - **AWS and SAM Integration**: AWS Command Line Interface (CLI) and AWS Serverless Application Model (SAM) are installed to facilitate AWS-related development tasks.
+- **Claude Code Integration**: Pre-configured with the [Claude Code](https://claude.ai/claude-code) VS Code extension, including automatic configuration persistence and terminal integration.
 
 ## Development Environment Details
 
@@ -27,11 +28,23 @@ The AWS CLI and SAM tools are pre-installed in this environment to facilitate AW
 
 2. **AWS SAM**: AWS SAM is installed to simplify the development of serverless applications. Use `sam --version` to confirm the installation and explore available commands for building and deploying serverless applications.
 
+### Claude Code
+
+[Claude Code](https://claude.ai/claude-code) is integrated into this development environment with the following configuration:
+
+- **VS Code Extension**: The `anthropic.claude-code` extension is automatically installed when the container starts.
+- **Configuration Persistence**: The `~/.claude` directory from your host machine is bind-mounted to `/root/.claude` inside the container, so your Claude Code configuration and session data persist across container rebuilds.
+- **Environment Variable**: `CLAUDE_CONFIG_DIR` is set to `/root/.claude` automatically, pointing Claude Code to the mounted config directory.
+- **Terminal Integration**: `claudeCode.useTerminal` is enabled, allowing Claude Code to use the integrated VS Code terminal.
+
+**Prerequisite**: Claude Code must be installed and configured on your host machine before the bind-mount will carry your credentials into the container.
+
 For more information on using Docker, AWS CLI, and SAM, refer to their respective documentation:
 
 - [Docker Documentation](https://docs.docker.com/)
 - [AWS CLI Documentation](https://docs.aws.amazon.com/cli/)
 - [AWS SAM Documentation](https://docs.aws.amazon.com/serverless-application-model/)
+- [Claude Code Documentation](https://code.claude.com/docs/en/overview)
 
 ## Getting Started
 
@@ -48,7 +61,7 @@ To use this DevContainer for your Golang projects:
    ```
 4. Open the cloned folder in Visual Studio Code.
 5. VS Code should detect the DevContainer configuration. Click on the "Reopen in Container" prompt in the bottom-right corner.
-6. Voila! You're now set up with a Golang development environment with Docker, AWS CLI, and SAM configured.
+6. Voila! You're now set up with a Golang development environment with Docker, AWS CLI, SAM, and Claude Code configured.
 
 For more detailed instructions, refer to the [DevContainer documentation](https://code.visualstudio.com/docs/devcontainers/containers).
 
@@ -73,6 +86,7 @@ This project is licensed under the [MIT License](LICENSE.md).
   - [AWS SAM](https://aws.amazon.com/serverless/sam/): Aiding in the development of serverless applications.
   - [VS Code DevContainers](https://code.visualstudio.com/docs/remote/containers): Structure and setup inspiration.
   - [golangci-lint](https://golangci-lint.run/): Linting tool for checking Go code.
+  - [Claude Code](https://claude.ai/claude-code): AI coding assistant integrated into the development environment.
 
 - **Docker Images**:
   - [marcodellorto/golang](https://hub.docker.com/r/marcodellorto/golang): Docker images used as a base for the Golang development environment.
