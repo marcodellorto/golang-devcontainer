@@ -8,7 +8,7 @@
   "workspaceFolder": "/var/workspace",
   "mounts": [
     "source=${env:HOME}${env:USERPROFILE}/.aws,target=/root/.aws,type=bind",
-    "source=${env:HOME}${env:USERPROFILE}/.claude,target=/root/.claude,type=bind",
+    "source=${env:HOME}${env:USERPROFILE}/.codex,target=/root/.codex,type=bind",
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
   ],
   "customizations": {
@@ -28,7 +28,6 @@
         "go.testFlags": [
           "-v"
         ],
-        "claudeCode.useTerminal": true,
         "yaml.customTags": [
           "!Equals sequence",
           "!FindInMap sequence",
@@ -52,11 +51,8 @@
         "redhat.vscode-yaml",
         "editorconfig.editorconfig",
         "ms-azuretools.vscode-docker",
-        "anthropic.claude-code"
+        "openai.chatgpt"
       ]
     }
-  },
-  "containerEnv": {
-    "CLAUDE_CONFIG_DIR": "/root/.claude",
   }
 }
