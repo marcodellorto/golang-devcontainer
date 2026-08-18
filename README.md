@@ -89,7 +89,7 @@ This project is licensed under the [MIT License](LICENSE.md).
   - [Claude Code](https://claude.ai/claude-code): AI coding assistant integrated into the development environment.
 
 - **Docker Images**:
-  - [marcodellorto/golang](https://hub.docker.com/r/marcodellorto/golang): Docker images used as a base for the Golang development environment.
+  - [`ghcr.io/marcodellorto/golang`](https://github.com/marcodellorto/golang/pkgs/container/golang): Docker images used as a base for the Golang development environment.
 
 - **External Resources**:
   - [Golang Documentation](https://golang.org/doc/): Best practices and language features.
